@@ -5,7 +5,7 @@ import BookingRow from "./BookingRow";
 const Bookings = () => {
     const { user } = useContext(AuthContext);
     const [bookings, setBookings] = useState([]);
-    console.log(bookings);
+    // console.log(bookings);
 
     const url = `http://localhost:5000/bookings?email=${user?.email}`;
 
@@ -53,7 +53,7 @@ const Bookings = () => {
         })
         .then(res=> res.json())
         .then(data =>{
-            console.log(data);
+            // console.log(data);
             if(data.modifiedCount > 0){
                 const remaining = bookings.filter(booking => booking._id !== id)
                 const updated = bookings.find(booking => booking._id === id)
