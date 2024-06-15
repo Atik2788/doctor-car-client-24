@@ -31,7 +31,6 @@ const CheckOut = () => {
         // console.log(booking);
 
         axios.post('http://localhost:5000/bookings', booking)
-        // .then(res => res.json())
         .then( data => {
             // console.log(data)
             if(data.data.acknowledged){
