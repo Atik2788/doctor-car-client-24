@@ -9,6 +9,7 @@ const Bookings = () => {
     // console.log(bookings);
 
     const url = `http://localhost:5000/bookings?email=${user?.email}`;
+    // const url = `http://localhost:5000/bookings?email=aaaa@gmail.com`;
 
     useEffect(() => {
 

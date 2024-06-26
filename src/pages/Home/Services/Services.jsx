@@ -1,15 +1,20 @@
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 import ServicesCard from "./ServicesCard";
+import useServices from "../../../hooks/useServices";
 
 
 const Services = () => {
-    const [services, setServices] = useState([]);
+    const services = useServices()
+    // console.log('hook services', services);
+
+/*     const [services, setServices] = useState([]);
 
     useEffect(() => {
         fetch('http://localhost:5000/services')
             .then(res => res.json())
             .then(data => setServices(data))
-    }, [])
+    }, []) */
+
 
     return (
         <div>
