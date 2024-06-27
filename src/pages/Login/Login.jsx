@@ -34,7 +34,7 @@ const Login = () => {
                 const user = { email }
 
                 // get access token
-                axios.post('http://localhost:5000/jwt', user, {withCredentials: true} )
+                axios.post('https://car-doctor-server-24.vercel.app/jwt', user, {withCredentials: true} )
                     .then(res => {
                         console.log(res.data)
                         if (res.data.success) {

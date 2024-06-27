@@ -30,7 +30,7 @@ const CheckOut = () => {
 
         // console.log(booking);
 
-        axios.post('http://localhost:5000/bookings', booking)
+        axios.post('https://car-doctor-server-24.vercel.app/bookings', booking)
         .then( data => {
             // console.log(data)
             if(data.data.acknowledged){
@@ -39,7 +39,7 @@ const CheckOut = () => {
         })
         .catch(err => console.log(err))
 
-        // fetch('http://localhost:5000/bookings',{
+        // fetch('https://car-doctor-server-24.vercel.app/bookings',{
         //     method: 'POST',
         //     headers: {
         //         'content-type': 'application/json'
